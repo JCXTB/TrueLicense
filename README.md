@@ -1554,7 +1554,7 @@ license:
   # publicKeysStorePath: E:/licenseTest/publicCerts.keystore
   publicKeysStorePath: /root/license-test/publicCerts.keystore
 ```
-![image](./images/1.png)
+![image](./markdown-images/1.png)
 2. 可以看到第一次启动找不到证书文件，证书安装失败
 3. 通过调用前面所写的接口 ```/license/getServerInfos```，获取服务器硬件信息
 ```
@@ -1575,7 +1575,7 @@ license:
     "mainBoardSerial": "2102311TUVCNJC000055"
 }
 ```
-![image](C3D117FAF88D4A6EB8D9D183D7779D81)
+![image](./markdown-images/2.png)
 3. 调用前面所写的接口 ```/license/generateLicense```，生成 license 文件
 ```
 {
@@ -1608,14 +1608,14 @@ license:
     }
 }
 ```
-![image](F5D1F10161D442CF98D6C420BFB91C34)
+![image](./markdown-images/3.png)
 
 请求成功后会在设置的 licensePath 目录下生成一个 license.lic 文件
 
-![image](089D55E15A164A12BAB4BCF25BD6903B)
+![image](./markdown-images/4.png)
 4. 重新启动服务，证书安装成功
 
-![image](41A464AF5A2F42EC896C67A2F528A489)
+![image](./markdown-images/5.png)
 
 # 证书有效性校验
 为了方便调试，直接在本地运行了，验证证书有效性代码如下（实际生产中，需要在项目代码多处关键位置埋点，校验证书的有效性）：
@@ -1644,13 +1644,13 @@ class TrueLicenseApplicationTests {
 ```
 1. 在创建证书的情况下，运行证书校验单元测试，打印证书无效的信息
 
-![image](4723F972AE6B4D15A67435CEF903BFF1)
+![image](./markdown-images/6.png)
 2. 直接将前文在服务器上生成的证书下载到本地，启动项目，打印证书无效的信息（安装证书前会校验，IP地址、MAC 地址、CPU 序列号等前文设置的校验参数，防止证书复制翻版）
 
-![image](768BFF70A34A4D7682245048AB5D1C14)
+![image](./markdown-images/7.png)
 3. 重复上述证书创建安装过程后，再次运行证书校验单元测试，证书有效，测试通过
 
-![image](D971FE9A1A534FD99AB873A803E7D03E)
+![image](./markdown-images/8.png)
 
 # [源码](https://github.com/JCXTB/TrueLicense)
 https://github.com/JCXTB/TrueLicense
