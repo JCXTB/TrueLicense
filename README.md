@@ -1674,5 +1674,5 @@ System.out.println("licese是否有效：" + licenseVerify.verify());
 
 ![image](./markdown-images/8.png)
 
-# <span id="head23"> [源码](https://github.com/JCXTB/TrueLicense)</span>
+# <span id="head23">源码</span>
 https://github.com/JCXTB/TrueLicense
