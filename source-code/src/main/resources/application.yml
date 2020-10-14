@@ -1,0 +1,18 @@
+server:
+  port: 8080
+# License 相关配置
+license:
+  # 主题
+  subject: license_demo
+  # 公钥别称
+  publicAlias: publicCert
+  # 访问公钥的密码
+  storePass: pubwd123456
+  # license 位置
+  licensePath: ./src/main/resources/license/license.lic
+  # licensePath: E:/licenseTest/license.lic
+  # licensePath: /root/license-test/license.lic
+  # 公钥位置
+  publicKeysStorePath: ./src/main/resources/license/publicCerts.keystore
+  # publicKeysStorePath: E:/licenseTest/publicCerts.keystore
+  # publicKeysStorePath: /root/license-test/publicCerts.keystore
